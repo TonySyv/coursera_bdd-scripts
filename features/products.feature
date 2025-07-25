@@ -1,3 +1,15 @@
+Feature: Product Management
+
+  Scenario: Reading a Product
+    Given a product exists with the following details:
+      | id | name    | description       | price |
+      | 1  | Sundae  | Vanilla dessert   | 5.50  |
+    When I request the product details for product with id 1
+    Then I should receive the product details:
+      | id | name    | description       | price |
+      | 1  | Sundae  | Vanilla dessert   | 5.50  |
+
+
 Feature: Delete Product
 
   Background:
